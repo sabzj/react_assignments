@@ -1,6 +1,4 @@
-import React from "react";
-import { useState } from "react";
-import { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import "./objectBox.css";
 
 function ObjectBox() {
@@ -9,22 +7,12 @@ function ObjectBox() {
   const [index, setIndex] = useState(0);
   const [roundRadiusCount, setRoundRadiusCount] = useState(0);
 
-  //   useEffect(() => {
-  //     setTimeout(() => {
-  //       setBox(colors[index]);
-  //       index < 5
-  //         ? setIndex((index) => index + 1)
-  //         : index >= 5 - 1
-  //         ? setBox("roundRadius")
-  //         : setBox("");
-  //     }, 500);
-  //   }, [index]);
   useEffect(() => {
     setTimeout(() => {
       if (index < 5) {
         setBox(colors[index]);
         setIndex((index) => index + 1);
-      } else if (index % 5 === 0 && index != 0) {
+      } else if (index % 5 === 0 && index !== 0) {
         setBox("roundRadius");
         setRoundRadiusCount((count) => count + 1);
       } else {
