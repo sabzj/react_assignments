@@ -1,0 +1,23 @@
+#root {
+  max-width: 1280px;
+  margin: 0;
+  text-align: center;
+}
+
+#face_box {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  background-color: blueviolet;
+  margin: 20px;
+  animation: example 2s infinite;
+}
+
+@keyframes example {
+  0% {
+    transform: translateX(-200px);
+  }
+  50% {
+    transform: translateX(200px);
+  }
+}
